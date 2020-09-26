@@ -1,0 +1,50 @@
+<h3>Update Question</h3>
+<div class="Main">
+  <form (ngSubmit)="onSubmit()">
+    <div class="Question">
+      <label for="name">Question</label>
+      <input type="text" class="form-control" id="question" required [(ngModel)]="question.question" name="question">
+    </div>
+
+    <div class="A">
+      <label for="name">Option_A</label>
+      <input type="text" class="form-control" id="question" required [(ngModel)]="question.option_A" name="option_A">
+    </div>
+	
+	 <div class="B">
+      <label for="name">Option_B</label>
+      <input type="text" class="form-control" id="question" required [(ngModel)]="question.option_B" name="option_B">
+    </div>
+	
+	 <div class="C">
+      <label for="name">Option_C</label>
+      <input type="text" class="form-control" id="question" required [(ngModel)]="question.option_C" name="option_C">
+    </div>
+	
+	 <div class="D">
+      <label for="name">Option_D</label>
+      <input type="text" class="form-control" id="question" required [(ngModel)]="question.option_D" name="option_D">
+    </div>
+	
+	<div class="Selected">
+      <label for="name">Selected</label>
+      <input type="text" class="form-control" id="question" required [(ngModel)]="question.selected_Opt" name="selected">
+      
+    </div>
+
+<div class="submit">
+      <label for="name"></label>
+<button id="button" type="submit" class="btn btn-success">Submit</button>
+    </div>
+
+    <div>
+      <div class="empty"></div>
+    
+    </div>
+  </form>
+</div>
+
+<!--<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+<!--</div>-->

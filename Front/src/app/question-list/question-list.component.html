@@ -1,0 +1,44 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Question List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Question</th>
+            <th>Option_A</th>
+            <th>Option_B</th>
+            <th>Option_C</th>
+            <th>Option_D</th>
+            <th>Selected</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let question of questions | async">
+            <td>{{question.id}}</td>
+            <td>{{question.question}}</td>
+            <td>{{question.option_A}}</td>
+            <td>{{question.option_B}}</td>
+            <td>{{question.option_C}}</td>
+            <td>{{question.option_D}}</td>
+            <td>{{question.selected_Opt}}</td>
+
+            <td><button (click)="deleteQuestion(question.id)" class="btn btn-danger">Delete</button>
+ 	  <a routerLink="/update/{{question.id}}"><button class="btn btn-success pull-right" > Update</button></a>
+
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+
+  
+  <div class="decor">
+  <app-create-question></app-create-question>
+  </div>
